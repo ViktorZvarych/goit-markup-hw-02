@@ -1,5 +1,10 @@
 /* body */
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* site colors */
 :root {
     --main-color: #000000;
@@ -25,7 +30,7 @@ a,
 a:visited {
     text-decoration: none;
 }
-
+/*  */
 ul {
     list-style: none;
 }
@@ -39,7 +44,6 @@ h1, h2, h3, h4, h5, h6, ul  {
 .header-logo {
     margin-top: 24px;
     margin-bottom: 24px;
-    padding-inline-start: 40px;
 }
 
 .main-nav,
@@ -111,22 +115,28 @@ h1, h2, h3, h4, h5, h6, ul  {
 
 
 section li {
-    display: inline-block;
-    vertical-align: top;
-    font-style: normal;
     text-align: center;
-    align-self: center;
 }
 
 /* section-hero - Ефективні рішення для вашого бізнесу */
 .section-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 600px;
     background-color: var(--hero-background-color);
     letter-spacing: 0.06em;
     color: var(--text-color-second);
 }
 
-.section-hero h1 {
+/* .hero-container {
+
+} */
+
+.section-hero h1 {    
+    width: 50%;
+    max-width: 600px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -134,10 +144,10 @@ section li {
     text-align: center;    
 }
 
-.hero-button {       
+.hero-button {    
     width: 216px;
     height: 50px;
-    margin: 10px 40% 200px 40%;
+    /* margin: auto; */
     background-color: var(--second-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -154,11 +164,18 @@ section li {
 }
 
 /* section-advantages Наші переваги */
-.section-advantages li {
-    display: inline-block;
+.section-advantages-item {
+    vertical-align: top;
+    margin: 15px;
     margin-top: 40px;
     width: 270px;
     height: 98px;      
+}
+
+.section-advantages-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .section-advantages h2 {
@@ -193,8 +210,27 @@ section li {
     text-align: center;   
 }
 
+.section-occupation-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-occupation-item {
+   margin: 10px; 
+}
 
 /* section-team Наша команда*/
+.section-team-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-team-item {
+    margin: 10px; 
+ }
+
 .section-team h2,
 .section-team h3,
 .section-team p {
@@ -224,7 +260,15 @@ section li {
     font-size: 0;
 }
 
+.portfolio-filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .portfolio-filter {
+    margin: 2px;
+    padding: 0 5px; 
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -241,6 +285,20 @@ section li {
     color: var(--text-color-second);
     background-color: var(--second-color);
 }
+
+.section-portfolio-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-web,
+.portfolio-design,
+.portfolio-application,
+.portfolio-marketing {
+    margin: 15px;
+}
+
 
 .section-portfolio h2,
 .section-portfolio p {
@@ -270,7 +328,6 @@ footer {
     display: inline-block;
     margin-top: 60px;
     margin-bottom: 20px;
-    padding-inline-start: 40px;
 }
 
 .footer-links {
