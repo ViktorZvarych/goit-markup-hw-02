@@ -153,9 +153,9 @@ body {
 }
 
 /*Education-block*/
-.Education-block{
+/* .Education-block{
     
-}
+} */
 
 .Education-university{
     font-style: normal;
@@ -207,11 +207,11 @@ body {
     /*width: 370px;*/
     max-width: 100%;
     width: 300px;
-    border-radius: 15px;
+    border-radius: 9px;
     height: auto;
     display: block;
     margin-bottom: 45px;
-    margin-left: 20%;
+    margin-left: 5%;
     
 }
 
